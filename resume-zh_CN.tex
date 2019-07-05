@@ -52,13 +52,13 @@
 % \end{onehalfspacing}
 
 \datedsubsection{\textbf{北邮人论坛搜索引擎}}{2019年5月 -- 2019年6月}
-\role{Python}{合作项目}
+\role{Python}{个人项目}
 \begin{onehalfspacing}
-优雅的 \LaTeX\ 简历模板, https://github.com/billryan/resume
+面向北邮人论坛所有帖子的全局搜索引擎
 \begin{itemize}
-  \item 容易定制和扩展
-  \item 完善的 Unicode 字体支持，使用 \XeLaTeX\ 编译
-  \item 支持 FontAwesome 4.5.0
+  \item 使用Scrapy框架爬取论坛所有帖子信息
+  \item 将数据存入ElasticSearch，建立索引
+  \item 搜索引擎后台使用Diango框架，从ElasticSearch搜索并与前端交互
 \end{itemize}
 \end{onehalfspacing}
 
