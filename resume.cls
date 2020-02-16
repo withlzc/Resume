@@ -48,7 +48,7 @@
 \RequirePackage[super]{nth}
 
 \titleformat{\section}         % Customise the \section command 
-  {\Large\scshape\raggedright} % Make the \section headers large (\Large),
+  {\Large\raggedright} % Make the \section headers large (\Large),
                                % small capitals (\scshape) and left aligned (\raggedright)
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
   {}                           % Can be used to insert code before the heading
@@ -71,23 +71,28 @@
   {\par #1 \hfill #2 \par}%
 }
 
+% defines one's name
+% usage: \name{<name>}
 \newcommand{\name}[1]{
-  \centerline{\Huge\scshape{#1}}
+  \centerline{\Huge{#1}}
   \vspace{1.25ex}
 }
 
-% defines one's name
-% usage: \name{<name>}
-\newcommand{\nameTest}[1]{
-  {\large\scshape{#1}}
+% defines one's address
+\newcommand{\address}[3]{%
+    \centerline{%
+        \makebox[0pt][c]{%
+            {Address: } #1 {\textperiodcentered} #2 {\textperiodcentered} #3
+        }%
+    }%
 }
 
 % defines one's email
 % usage: \email{<email>}
-\newcommand{\email}[1]{\faEnvelope\ \href{mailto:#1}{#1}}
+\newcommand{\email}[1]{{Email: }\href{mailto:#1}{#1}}
 % defines one's phone
 % usage: \phone{<phone>}
-\newcommand{\phone}[1]{\faPhone\ {#1}}
+\newcommand{\phone}[1]{{Tel: }{#1}}
 % defines one's linkedin
 % usage: \linkedin{<linkedin>}
 \newcommand{\linkedin}[2][]{\faLinkedin\ 
@@ -111,9 +116,27 @@
     {\href{#2}{#2}}
     {\href{#2}{#1}}}
 
-\newcommand{\basicInfo}[1]{
-  \centerline{\sffamily\large{#1}}
-  \vspace{1.5ex}
+% \newcommand{\contact}[1]{
+%   \centerline{\large{#1}}
+%   % \vspace{1.5ex}
+% }
+
+\newcommand{\contact}[2]{
+  \centerline{%
+        \makebox[0pt][c]{%
+            {Tel: } {#1} {\sffamily\large\textperiodcentered} {Email: } {\href{mailto:#2}{#2}}
+        }%
+    }%
+}
+
+% defines one's info
+\newcommand{\basicInfo}[3]{%
+    \centerline{%
+        \makebox[0pt][c]{%
+            {#1} {\sffamily\large\textperiodcentered} {#2} {\sffamily\large\textperiodcentered} {#3}
+        }%
+    }%
+    \vspace{1.5ex}
 }
 
 \newcommand{\role}[2]{
