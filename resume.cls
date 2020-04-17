@@ -89,10 +89,10 @@
 
 % defines one's email
 % usage: \email{<email>}
-\newcommand{\email}[1]{{Email: }\href{mailto:#1}{#1}}
+\newcommand{\email}[1]{\href{mailto:#1}{#1}}
 % defines one's phone
 % usage: \phone{<phone>}
-\newcommand{\phone}[1]{{Tel: }{#1}}
+\newcommand{\phone}[1]{{#1}}
 % defines one's linkedin
 % usage: \linkedin{<linkedin>}
 \newcommand{\linkedin}[2][]{\faLinkedin\ 
@@ -130,10 +130,10 @@
 }
 
 % defines one's info
-\newcommand{\basicInfo}[3]{%
+\newcommand{\basicInfo}[2]{%
     \centerline{%
         \makebox[0pt][c]{%
-            {#1} {\sffamily\large\textperiodcentered} {#2} {\sffamily\large\textperiodcentered} {#3}
+            {#1} {\sffamily\large\textperiodcentered} {#2} 
         }%
     }%
     \vspace{1.5ex}
