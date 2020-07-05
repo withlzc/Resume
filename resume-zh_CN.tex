@@ -16,11 +16,18 @@
 \name{雷志成}
 
 % \basicInfo{
-  \centerline {\phone{(+86) 18501969152} \textperiodcentered\ 
+  \centerline {\phone{+86 18501969152} \textperiodcentered\ 
   \email{withlzc@163.com}}
   % \github[withlzc]{https://github.com/withlzc}
   % \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}
 % }
+
+\section{\faUsers\ 个人简介}
+\begin{itemize}
+  \item 一年Golang后端开发实习经验，熟悉项目开发流程以及自动化部署
+  \item 熟悉HTTP、TCP/IP、WebSocket等网络协议，了解PostgreSQL、MySQL、Redis等数据库
+  \item 熟悉Linux开发环境
+\end{itemize}
 
 \section{\faGraduationCap\ 教育背景}
 \datedsubsection{\textbf{北京邮电大学}}{2018.09 -- 至今}
@@ -33,28 +40,32 @@
 \\核心课程：高级语言程序设计，数据结构与算法，C++程序设计，Java与面向对象程序设计，计算机网络，数据库原理及应用
 \\平均绩点：2.58 / 4
 
+% 项目经历：产品、技术、结果
+% 3句话，你做了什么，你用了什么技术，有哪些impact（给数据，比如traffic/users 提升了多少，delay 少了多少，处理了多大的文件）
+
 \section{\faBriefcase\ 实习/项目经历}
 \datedsubsection{\textbf{灵汐科技}，北京}{2019.09 -- 2020.06}
-\role{Golang}{服务端开发实习}
-\textbf{智能视频监控系统}
+\role{Golang}{后端开发实习}
+\textbf{智能安防监控系统}
 \begin{itemize}
-  \item 开发系统数据库缓存模块，提高数据访问速度
-  \item 开发系统业务日志中间件，配合Swagger docs自动生成业务日志
-  \item 优化系统消息通知模块，使用WebSocket实时推送
-  \item 修改摄像头实时视频流的播放方式
+  % \item 开发系统数据库缓存模块，提高数据访问速度
+  \item 开发系统业务日志中间件，配合Swagger生成的API文档自动生成业务日志
+  % \item 优化系统消息通知模块，使用WebSocket实时推送
+  \item 通过封装WebSocket实现系统消息通知模块，提升消息通知的实时性与稳定性
+  \item 修改后端推送摄像头实时视频流的方式，前端使用http-flv播放
   \item 重构人脸比对任务的worker以及pipeline
-  \item 使用Docker部署系统，开发脚本优化部署流程
+  % \item 使用Docker部署系统，开发脚本优化部署流程
 \end{itemize}
 
 \textbf{智能巡检系统}
 \begin{itemize}
   \item 完成业务管理平台的概要设计与详细设计
-  \item 开发设备管理、预置位管理、任务管理等多个模块
+  \item 开发业务管理平台中设备管理、预置位管理、任务管理等多个模块
   % \item 优化系统设计，尽可能实现模块间解耦
-  \item 开发采集与分析模块，通过调用so的方式操作硬件模块
+  \item 开发采集与分析模块，通过cgo调用动态库与摄像头、机械臂以及算法模块交互
 \end{itemize}
 
-\textbf{单机多卡负载均衡调度系统}
+\textbf{单机多卡调度系统}
 \begin{itemize}
   \item 设计共享状态调度的总体方案以及架构
   \item 开发任务池、调度器、资源管理器、节点管理等模块
@@ -66,83 +77,44 @@
 \begin{onehalfspacing}
 面向北邮人论坛所有帖子的全局搜索引擎
 \begin{itemize}
-  \item 使用Scrapy框架开发爬虫模块获取论坛所有帖子信息
-  \item 将数据存入ElasticSearch，建立索引
-  \item 后台使用Diango框架，从ElasticSearch搜索并与前端交互
+  \item 使用Scrapy框架开发爬虫模块获取论坛所有帖子信息存入ElasticSearch
+  % \item 将数据存入ElasticSearch，建立索引
+  \item 后台使用Diango框架，从ElasticSearch搜索帖子信息并与前端交互
 \end{itemize}
 \end{onehalfspacing}
 
 % \section{\faUsers\ 项目经历}
-% \datedsubsection{\textbf{黑科技公司} 上海}{2015年3月 -- 2015年5月}
-% \role{实习}{经理: 高富帅}
-% xxx后端开发
-% \begin{itemize}
-%   \item 实现了 xxx 特性
-%   \item 后台资源占用率减少8\%
-%   \item xxx
-% \end{itemize}
-
-% \datedsubsection{\textbf{分布式科学上网姿势}}{2014年6月 -- 至今}
-% \role{Golang, Linux}{个人项目，和富帅糕合作开发}
-% \begin{onehalfspacing}
-% 分布式负载均衡科学上网姿势, https://github.com/cyfdecyf/cow
-% \begin{itemize}
-%   \item 修复了连接未正常关闭导致文件描述符耗尽的 bug
-%   \item 使用Chord 哈希 URL, 实现稳定可靠地分流
-%   \item xxx (尽量使用量化的客观结果)
-% \end{itemize}
-% \end{onehalfspacing}
-
-% 3句话，你做了什么，你用了什么技术，有哪些impact（给数据，比如traffic/users 提升了多少，delay 少了多少，处理了多大的文件）
-% \datedsubsection{\textbf{个人博客及管理系统}}{2019年7月 -- 2019年8月}
-% \role{SpringBoot + Vue}{个人项目}
-% \begin{onehalfspacing}
-% 简易个人博客以及后台博客管理系统
-% \begin{itemize}
-%   \item 使用SpringBoot和Vue进行前后端分离开发
-%   \item 使用MySQL作为数据库存储相关数据
-%   \item 实现了博客前端展示以及后台对博客以及页面的管理
-% \end{itemize}
-% \end{onehalfspacing}
-
-% \datedsubsection{\textbf{北邮人论坛搜索引擎}}{2019.05 -- 2019.06}
 % \role{Python}{课程项目}
 % \begin{onehalfspacing}
 % 面向北邮人论坛所有帖子的全局搜索引擎
 % \begin{itemize}
-%   \item 使用Scrapy框架开发爬虫模块获取论坛所有帖子信息
-%   \item 将数据存入ElasticSearch，建立索引
-%   \item 后台使用Diango框架，从ElasticSearch搜索并与前端交互
+%   \item 使用Scrapy框架开发爬虫模块获取论坛所有帖子信息存入ElasticSearch
+%   % \item 将数据存入ElasticSearch，建立索引
+%   \item 后台使用Diango框架，从ElasticSearch搜索帖子信息并与前端交互
 % \end{itemize}
 % \end{onehalfspacing}
 
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
-
-\section{\faCogs\ IT 技能}
+\section{\faCogs\ 技能}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 编程语言: Golang、Java、C++、Python、Shell
+  \item 开发语言: Golang、Java、C++、Python、Shell
   % \item 平台: Linux
   % \item 框架: Gin、SpringBoot、Django
   \item 工具: Git、Docker
+  \item 语言: 英语 - 熟练 (CET 6)
 \end{itemize}
 
 % \section{\faHeartO\ 获奖情况}
 % \datedline{2016-2017学年综合素质测评奖学金}{2017年5月}
 % \datedline{校级优秀毕业生}{2018年6月}
 
-\section{\faInfo\ 其他}
-% increase linespacing [parsep=0.5ex]
-\begin{itemize}[parsep=0.5ex]
-  % \item 博客: https://withlzc.github.io
-  % \item GitHub: https://github.com/withlzc
-  \item 语言: 英语 - 熟练 (CET 6)
-\end{itemize}
+% \section{\faInfo\ 其他}
+% % increase linespacing [parsep=0.5ex]
+% \begin{itemize}[parsep=0.5ex]
+%   % \item 博客: https://withlzc.github.io
+%   % \item GitHub: https://github.com/withlzc
+%   \item 语言: 英语 - 熟练 (CET 6)
+% \end{itemize}
 
 %% Reference
 %\newpage
